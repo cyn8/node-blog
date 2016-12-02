@@ -27,7 +27,7 @@ module.exports = function(app) {
 				posts: posts,
                 page: page,
                 isFirstPage: (page - 1) == 0,
-                isLastPage: ((page - 1) * 10 + post.length) == total,
+                isLastPage: ((page - 1) * 10 + posts.length) == total,
 				success: req.flash('success').toString(),
 				error: req.flash('error').toString()
 			});
@@ -184,7 +184,7 @@ module.exports = function(app) {
                     posts: posts,
                     page: page,
                     isFirstPage: (page - 1) == 0,
-                    isLastPage: ((page - 1) * 10 + post.length) == total,
+                    isLastPage: ((page - 1) * 10 + posts.length) == total,
                     success: req.flash('success').toString(),
                     error: req.flash('error').toString()
                 });
